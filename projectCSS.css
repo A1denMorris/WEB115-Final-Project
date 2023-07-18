@@ -1,56 +1,91 @@
+/* 
+Aiden Morris
+07/17/2023
+Main CSS file for Final Project 
+*/
+
+
+@media print {
+    h1 {
+        font-size: medium;
+    }
+
+    body {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: small;
+        min-height: 90%;
+    }
+
+    input.sub_button {
+        display: none;
+    }
+}
+
 .grid-container {
     display: grid;
     grid-auto-columns: minmax(100px, auto);
     grid-auto-rows: minmax(100px, auto);
-    min-width: 80px;
     border-style: solid;
     align-items: center;
+}
+
+.MPs_form {
+    border-style: solid;
+    min-width: 100%;
+}
+
+.meal {
+    flex-wrap: wrap;
+    max-width: 100px;
 }
 
 .day_title {
     border-right: solid;
 }
 
-#sunday {
-    grid-column: 1;
-    grid-row: 1;
+.input-box {
+    width: 65%
 }
-#monday {
-    grid-column: 2;
-    grid-row: 1;
-}
-#tuesday {
-    grid-column: 3;
-    grid-row: 1;
-}
-#wednesday {
-    grid-column: 4;
-    grid-row: 1;
-}
-#thursday {
-    grid-column: 5;
-    grid-row: 1;
-}
-#friday {
-    grid-column: 6;
-    grid-row: 1;
-}
-#saturday {
-    grid-column: 7;
-    grid-row: 1;
+
+.sub_button {
+    width: 100px;
+    text-align: center;
 }
 
 h1 {
     text-align: center;
-    font: Calibri;
+    min-width: 40px;
+}
+
+form#info_form {
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 25%;
+
+    background-color: blanchedalmond;
+    border-style: dotted;
 }
 
 #main_div {
-    border-style: double;
-    border-inline-color: 'blue';
     text-align: center;
+    border-style: double;
 }
 
-#info_form {
-    align-content: center;
+#usr_goal {
+    height: 100px;
+    width: 90%;
+}
+
+#MP_infoHeader {
+    display: grid;
+    background-color: antiquewhite;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#mealPlan_submissionArea {
+    margin-top: 25px;
 }

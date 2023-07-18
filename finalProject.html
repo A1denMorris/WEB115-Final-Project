@@ -1,51 +1,52 @@
+<!-- Aiden Morris -->
+<!-- 07/17/2023 -->
+<!-- Main HTML file for Final Project -->
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
         <title>Meal Plan Application</title>
         <link rel="stylesheet" type="text/css" href="projectCSS.css">
-        <script 
-            src="https://code.jquery.com/jquery-3.7.0.min.js" 
-            integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" 
-            crossorigin="anonymous">
-        </script>
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js" 
+                    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" 
+                    crossorigin="anonymous"></script>
         <script 
             src="projectJS.js" defer>
-        </script>
-        
+        </script> 
     </head>
+
     <body>
         <div id="main_div">
+            <img src="PerfPortLogo.png" style="width: 100%">
             <form id="info_form">
-                <p>Enter Name: <input type="text" id="usr_name"></p>
-                <input type="button" value="Test" id="m_button" onclick="testFunction()">
-            </form>
-            
+                <p>First Name: <input type="text" id="usr_fname" class="input-box"></p>
+                
+                <p>Last Name: <input type="text" id="usr_lname" class="input-box"></p>
+                
+                <p>Email: <input type="text" id="usr_email" class="input-box"></p>
 
-            <div class="grid-container">
-                <div id="sunday" class="day_title">
-                    <h1>Sunday</h1>
+                <p>What is your goal?</p>
+                <textarea id="usr_goal"></textarea>
+                
+                <input type="button" id="submit_button" value="Submit">
+                <div id="mealPlan_submissionArea">
+                    <input type="button" class="sub_button" id="MP_clear" value="Clear Planner">
                 </div>
-                <div id="monday" class="day_title">
-                    <h1>Monday</h1>
-                </div>
-                <div id="tuesday" class="day_title">
-                    <h1>Tuesday</h1>
-                </div>
-                <div id="wednesday" class="day_title">
-                    <h1>Wednesday</h1>
-                </div>
-                <div id="thursday" class="day_title">
-                    <h1>Thursday</h1>
-                </div>
-                <div id="friday" class="day_title">
-                    <h1>Friday</h1>
-                </div>
-                <div id="saturday">
-                    <h1>Saturday</h1>
-                </div>
-            
-            </div>
-        </div>
+
+            </form>
+
+            <div class="grid-container" id="DoW_grid">
+                <h1 id="sunday" class="day_title" style="grid-column: 1; grid-row: 1;">Sunday</h1>
+                <h1 id="monday" class="day_title" style="grid-column: 2;grid-row: 1;">Monday</h1>                
+                <h1 id="tuesday" class="day_title" style="grid-column: 3; grid-row: 1;">Tuesday</h1>                
+                <h1 id="wednesday" class="day_title" style="grid-column: 4; grid-row: 1;">Wednesday</h1>                
+                <h1 id="thursday" class="day_title" style="grid-column: 5; grid-row: 1;">Thursday</h1>                
+                <h1 id="friday" class="day_title" style="grid-column: 6; grid-row: 1;">Friday</h1>                
+                <h1 id="saturday" style="grid-column: 7; grid-row: 1;">Saturday</h1> 
+            </div>           
+        </div> 
+         
+        
     </body>
 </html>
